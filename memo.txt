@@ -1,0 +1,46 @@
+
+Memo File for Stock Market Simulator
+
+Author: [Your Name Here]
+Course: CIS 350
+Assignment: Program 2 - Stock Market Simulator
+
+--- Time Complexity Analysis ---
+
+1. Adding an Order:
+   - Inserting into the heap (buy or sell) involves O(log n), where n is the number of elements in the heap.
+   - The process also updates the global timestamp in O(1).
+
+2. Processing Trades:
+   - Comparing the top elements of the buy and sell heaps occurs in O(1).
+   - Adjusting the heap (e.g., after trades) involves O(log n) operations for insertion/removal.
+   - In the worst case, all elements in the buy and sell heaps are processed, leading to O(n log n) complexity.
+
+3. Printing Orders:
+   - Collecting and sorting the heap elements for display involves O(n log n), where n is the size of the heap.
+
+--- Space Complexity Analysis ---
+
+1. The space complexity of the buy and sell heaps is O(n), where n is the total number of elements across both heaps.
+2. The additional space used for temporary variables and recursion during traversal is O(log n).
+
+--- Summary ---
+
+The program effectively manages the stock market simulation using heaps for priority queues. Its operations (insert, remove, trade processing) are efficient and scale logarithmically with the number of elements in the heap.
+
+--- Key Updates in Latest Version ---
+
+1. Enhanced Output Logging:
+   - Added logging for input commands (`buy`, `sell`, `print`) to align with the expected output format.
+   - Ensured that buy prices are displayed as negative, as per the requirements.
+
+2. Correct Formatting for Display:
+   - Ensured hierarchical display and proper ordering of buy/sell heaps during print operations.
+
+3. Accurate Trade Matching:
+   - Fixed logic to match buy and sell orders based on prices and shares.
+
+--- Notes ---
+
+- Ensure the input file 'input.txt' is in the same directory as the program.
+- Outputs are printed to match the expected format.
